@@ -7,6 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.x-3776AB?logo=python&logoColor=white)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-2ea44f)
 ![Type](https://img.shields.io/badge/project-beginner%20friendly-6f42c1)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 </div>
 
@@ -15,6 +16,10 @@
 Guess the hidden word one letter at a time. You get **6 wrong guesses** before
 the game is over. A small, readable example of loops, conditionals and string
 handling in plain Python — a nice first project to read or tinker with.
+
+<p align="center">
+<img src="assets/demo.gif" width="72%" alt="Terminal playthrough of the hangman game correctly guessing the word python">
+</p>
 
 ## Play
 
@@ -55,3 +60,7 @@ All the logic lives in [`hangman.py`](hangman.py):
 
 Want to make it yours? Extend `word_list` in [`hangman.py`](hangman.py), or add
 difficulty levels, categories, or a score counter.
+
+## License
+
+Released under the [MIT License](LICENSE).
