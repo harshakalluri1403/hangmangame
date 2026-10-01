@@ -1,54 +1,57 @@
-# Hangman Game in Python
-### Description
-This is a simple Hangman game implemented in Python. The goal of the game is for the player to guess the secret word, one letter at a time, within a certain number of attempts. If the player guesses the word correctly before running out of attempts, they win. Otherwise, they lose and the word is revealed.
+<div align="center">
 
-### Features
-1. Random word selection from a predefined word list.
-2. Player guesses one letter at a time.
-3. Display of the current state of the word with correctly guessed letters.
-4. Display of incorrect guesses and remaining attempts.
-5. Win or lose notification at the end of the game.
+# Hangman 🎯
 
-### Prerequisites
-Python 3.x installed on your machine.
+### A classic word-guessing game in a single Python file — no dependencies, runs in the terminal
 
-### How to Run the Game
-1. Clone the Repository
-```
-git clone https://github.com/yourusername/hangmangame
-```
-2. Navigate to the Game Directory
-```
+![Python](https://img.shields.io/badge/python-3.x-3776AB?logo=python&logoColor=white)
+![Dependencies](https://img.shields.io/badge/dependencies-none-2ea44f)
+![Type](https://img.shields.io/badge/project-beginner%20friendly-6f42c1)
+
+</div>
+
+---
+
+Guess the hidden word one letter at a time. You get **6 wrong guesses** before
+the game is over. A small, readable example of loops, conditionals and string
+handling in plain Python — a nice first project to read or tinker with.
+
+## Play
+
+```bash
+git clone https://github.com/harshakalluri1403/hangmangame.git
 cd hangmangame
-```
-3. Run the script
-```
 python hangman.py
 ```
 
-### How to Play
-1. A word is randomly selected, and the number of letters in the word is shown as underscores (_).
-2. The player guesses a letter:
-If the letter is in the word, all occurrences of the letter are revealed in the correct positions.
-If the letter is not in the word, the number of remaining attempts decreases.
-3. The player continues guessing letters until:
-They correctly guess the word (win).
-They run out of attempts (lose).
-4. At the end of the game, the player can choose to play again or exit.
+No installs needed — only the Python standard library.
 
-### Sample Gameplay
+## How it plays
+
 ```
-Copy code
-Welcome to Hangman!
-You have 6 attempts remaining.
 _ _ _ _ _ _
-
 Guess a letter: e
-Incorrect! You have 5 attempts remaining.
+Wrong guess! You have 5 attempts left.
 _ _ _ _ _ _
-
 Guess a letter: o
-Correct!
 _ o _ _ _ _
 ...
 ```
+
+- A random word is chosen and shown as underscores.
+- Enter one letter per turn. A correct letter is revealed in every position it
+  appears; a wrong one costs an attempt.
+- Guess the whole word before running out of attempts to **win**. Run out and
+  the word is revealed.
+- Choose to play again when a round ends.
+
+## Under the hood
+
+All the logic lives in [`hangman.py`](hangman.py):
+
+- `select_random_word()` — picks a word from the built-in list
+- `display_word()` — renders the masked word from the letters guessed so far
+- `hangman()` — the main game loop (input validation, scoring, replay)
+
+Want to make it yours? Extend `word_list` in [`hangman.py`](hangman.py), or add
+difficulty levels, categories, or a score counter.
